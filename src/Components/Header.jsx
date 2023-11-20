@@ -15,9 +15,7 @@ export default function Header() {
             {/* PC NAVBAR */}
 
             <NavLink to="/about" className="nav-links-pc" >About</NavLink>
-            <div className="logo">
-                <Link to="/" className="logo">Project</Link>
-            </div>
+            <Link to="/" className="logo">Project</Link>
             <NavLink to="/cart" className="nav-links-pc" >Cart</NavLink>
 
 
