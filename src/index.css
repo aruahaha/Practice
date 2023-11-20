@@ -11,20 +11,11 @@ body {
   font-family: 'Rubik', sans-serif;
 }
 
-header {
-  width: 100%;
-  height: 80px;
-  background-color: black;
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  padding: 0 100px;
-}
 
-.logo {
-  font-size: 28px;
-  font-weight: bold;
-  color: white;
+/* PHONE NAVBAR */
+
+.phone {
+  display: none;
 }
 
 .hamburger {
@@ -55,10 +46,65 @@ header {
   background-color: white;
 }
 
+/* Header and logo is common in both */
+
+header {
+  width: 100%;
+  height: 80px;
+  background-color: black;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 15px;
+}
+
+.logo {
+  font-size: 28px;
+  font-weight: bold;
+  color: white;
+  margin: auto;
+}
+
+/* ************** */
+
+
+
+
+
+/* ************************ */
+
+
+/* PC NAVBAR CSS */
+
+
+.nav-links-pc {
+  display: block;
+  color: white;
+  font-size: 20px;
+  padding: 10px 25px;
+  border-radius: 50px;
+  transition: 0.2s;
+  margin: 0 5px;
+}
+
+.nav-links-pc:hover {
+  color: black;
+  background-color: white;
+}
+
+.active {
+  color: black;
+  background-color: white;
+}
+
+
+/*************************/
+
+
 @media only screen and (max-width:1320px) {
 
   header {
-    padding: 0 50px;
+    padding: 0 20px;
   }
 
 }
@@ -67,12 +113,24 @@ header {
 @media only screen and (max-width:1100px) {
 
   header {
-    padding: 0 30px;
+    padding: 0 20px;
   }
 
 }
 
 @media only screen and (max-width:900px) {
+
+  .nav-links-pc {
+    display: none;
+  }
+
+  .logo {
+    margin: 0;
+  }
+
+  .phone {
+    display: block;
+  }
 
   .hamburger {
     display: block;
@@ -88,7 +146,6 @@ header {
 
   .nav-bar {
     height: 0;
-    /* display: none; */
     position: absolute;
     top: 80px;
     left: 0;
@@ -99,7 +156,7 @@ header {
   }
 
   .activeMenu {
-    height: 400px;
+    height: 300px;
   }
 
   .nav-bar ul {

@@ -12,30 +12,35 @@ export default function Header() {
 
     return (
         <header>
+            {/* PC NAVBAR */}
+            <NavLink to="/about" className="nav-links-pc" >About</NavLink>
             <div className="logo">
-                Project
+                <Link to="/" className="logo">Project</Link>
             </div>
-            <div className="hamburger" onClick={handleClick}>
-                <div className="line"></div>
-                <div className="line"></div>
-                <div className="line"></div>
+            <NavLink to="/cart" className="nav-links-pc" >Cart</NavLink>
+
+            {/* PHONE NAVBAR */}
+
+            <div className="phone">
+                <div className="hamburger" onClick={handleClick}>
+                    <div className="line"></div>
+                    <div className="line"></div>
+                    <div className="line"></div>
+                </div>
+                <nav className={activeMenu}>
+                    <ul>
+                        <li>
+                            <NavLink to="/about" className="nav-links" onClick={handleClick}>About</NavLink>
+                        </li>
+                        <li>
+                            <NavLink to="/contact" className="nav-links" onClick={handleClick}>Contact</NavLink>
+                        </li>
+                        <li>
+                            <NavLink to="/cart" className="nav-links" onClick={handleClick}>Cart</NavLink>
+                        </li>
+                    </ul>
+                </nav>
             </div>
-            <nav className={activeMenu}>
-                <ul>
-                    <li>
-                        <NavLink to="/" className="nav-links" onClick={handleClick}>Home</NavLink>
-                    </li>
-                    <li>
-                        <NavLink to="/about" className="nav-links" onClick={handleClick}>About</NavLink>
-                    </li>
-                    <li>
-                        <NavLink to="/contact" className="nav-links" onClick={handleClick}>Contact</NavLink>
-                    </li>
-                    <li>
-                        <NavLink to="/cart" className="nav-links" onClick={handleClick}>Cart</NavLink>
-                    </li>
-                </ul>
-            </nav>
-        </header>
+        </header >
     )
 }
