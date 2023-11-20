@@ -13,11 +13,13 @@ export default function Header() {
     return (
         <header>
             {/* PC NAVBAR */}
+
             <NavLink to="/about" className="nav-links-pc" >About</NavLink>
             <div className="logo">
                 <Link to="/" className="logo">Project</Link>
             </div>
             <NavLink to="/cart" className="nav-links-pc" >Cart</NavLink>
+
 
             {/* PHONE NAVBAR */}
 
@@ -41,6 +43,7 @@ export default function Header() {
                     </ul>
                 </nav>
             </div>
+
         </header >
     )
 }
